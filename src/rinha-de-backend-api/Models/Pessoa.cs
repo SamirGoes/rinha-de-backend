@@ -1,0 +1,1 @@
+public record Pessoa(string Apelido, string Nome, DateOnly Nascimento, string[] stack);
