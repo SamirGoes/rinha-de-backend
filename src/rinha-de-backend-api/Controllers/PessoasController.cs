@@ -6,25 +6,25 @@ namespace rinha_de_backend_api.Controllers;
 [Route("[controller]")]
 public class PessoasController : ControllerBase
 {
-    [HttpGet]
+    [HttpGet("GetById")]
     public async Task<ActionResult> GetById([FromServices] PessoasService pessoasService, Guid id)
     {
         return Ok();
     }
 
-    [HttpGet]
+    [HttpGet("GetByTerm")]
     public async Task<ActionResult> GetByTerm(string termo)
     {
         return Ok();
     }
 
-    [HttpPost]
+    [HttpPost("Create")]
     public async Task<ActionResult> Create(Pessoa pessoa)
     {
         return Ok();
     }
 
-    [HttpGet]
+    [HttpGet("Count")]
     public async Task<ActionResult> Count()
         => Ok();
 }
