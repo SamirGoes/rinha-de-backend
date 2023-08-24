@@ -1,3 +1,4 @@
+using rinha_de_backend_api.Models;
 using System.Linq.Expressions;
 
 namespace rinha_de_backend_api;
