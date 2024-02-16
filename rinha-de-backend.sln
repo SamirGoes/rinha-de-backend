@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9BCA5425-ACB7-4C56-8140-C404A25CDF4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RinhaDeBackEnd.API", "src\RinhaDeBackEnd.API\RinhaDeBackEnd.API.csproj", "{B2ABD63C-2383-4B26-8908-BCF3B6CAEC39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2ABD63C-2383-4B26-8908-BCF3B6CAEC39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2ABD63C-2383-4B26-8908-BCF3B6CAEC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2ABD63C-2383-4B26-8908-BCF3B6CAEC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2ABD63C-2383-4B26-8908-BCF3B6CAEC39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B2ABD63C-2383-4B26-8908-BCF3B6CAEC39} = {9BCA5425-ACB7-4C56-8140-C404A25CDF4B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99187AFB-8F04-42C8-9E08-4D11407ADF02}
+	EndGlobalSection
+EndGlobal

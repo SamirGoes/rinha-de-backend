@@ -1,3 +1,8 @@
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using RinhaDeBackEnd.API.DTO;
+using RinhaDeBackEnd.API.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -16,29 +21,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+app.MapPost("/clientes/{id}/transacoes", (int id, [FromBody] TransacaoRequestDTO body) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    return new TransacaoResponseDTO(100m, -100.87m);
 })
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+.WithName("GetTransactions");
+
+app.MapGet("/clientes/{id}/extrato", (int id) => {
+    return new ExtratoResponseDTO(100.0m, DateTime.Now, 100.50m, Enumerable.Empty<Transacao>());
+})
+.WithName("GetExtract");
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
