@@ -1,3 +1,3 @@
 namespace RinhaDeBackEnd.API.Models;
 
-public record Transacao(decimal valor, char tipo, string descricao, DateTime data);
+public record Transacao(int id, int usuario, decimal valor, char tipo, string descricao, DateTime data);
